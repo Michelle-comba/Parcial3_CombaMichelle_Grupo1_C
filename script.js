@@ -40,6 +40,10 @@ const valorBasico = consumoBasico * TARIFA_KWH;
 const valorExceso = consumoExceso * TARIFA_KWH;
 const costoConsumo = valorBasico + valorExceso;
 
+let subsidio = 0;
+let contribución: 0;
+
+
   
  
 
