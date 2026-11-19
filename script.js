@@ -19,26 +19,6 @@ const contribucion_Estrato5 = 60
 let Estrato = prompt("Ingrese su estrato (1-5):");
 let Consumo = prompt("Ingrese su consumo de energía en kWh (>= 0):");
 
-    switch (Estrato) {
-        case "1":
-            TarifaKwh = Estrato1;
-            break;
-        case "2":
-            TarifaKwh = Estrato2;
-            break;
-        case "3":
-            TarifaKwh = Estrato3;
-            break;
-        case "4":
-            TarifaKwh = Estrato4;
-            break;
-        case "5":
-            TarifaKwh = Estrato5;
-            break;
-        default:
-            alert("Estrato no válido");
-    }
-
 if  (entradaEstrato === null)
     entradaEstrato.tring () === ""
     entradaConsumo === null
@@ -53,13 +33,23 @@ const estrato = Number (entradaEstrato);
 
 
 
+const consumoBasico = consumo < CONSUMO_SUBSISTENCIA ? consumo : CONSUMO_SUBSISTENCIA;
+const consumoExceso = consumo - consumoBasico;
+
+const valorBasico = consumoBasico * TARIFA_KWH;
+const valorExceso = consumoExceso * TARIFA_KWH;
+const costoConsumo = valorBasico + valorExceso;
+
+  
+ 
+
+
+
+
 
     
     
-let ConsumoBasico = ConsumoDeSubsistencia * TarifaKwh;
-let consumoExeso = Consumo - ConsumoDeSubsistencia;
-let PagoTotal = (Consumo * TarifaKwh) + CargoFijoMensual;
-let costoConsumo = ConsumoBasico + consumoExeso;
+
 
 
 
